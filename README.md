@@ -50,9 +50,6 @@ habilitando autenticación
 sudo nano /etc/mongod.conf
 ```
 
-```
-sudo nano /etc/mongod.conf
-```
 en bindIp: IP_PC_Interna o localhost 
 ```
 security:
