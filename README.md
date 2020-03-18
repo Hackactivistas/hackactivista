@@ -37,18 +37,29 @@ Confgurar su DB, antes de ejecutar las migraciones..
  ./manage.py runserver
 ```
 
-### En mongod.conf, configuración de mongodb
+### Configuración de mongodb
 en terminal ejecutar
->> use admin
->> db.createUser( { user: "user_xxx", pwd: "passs_xxx", roles: [ { role: "userAdminAnyDatabase", db: "admin" }, "readWriteAnyDatabase" ] } )
+```
+ use admin
+```
+```
+ db.createUser( { user: "user_xxx", pwd: "passs_xxx", roles: [ { role: "userAdminAnyDatabase", db: "admin" }, "readWriteAnyDatabase" ] } )
+```
+habilitando autenticación
+```
+sudo nano /etc/mongod.conf
+```
 
-
->> sudo nano /etc/mongod.conf
-
-bindIp: IP_PC_Interna  : NOTA:Cuidado con poner la Ip PUBLICA si no, no hara comunicacion
+```
+sudo nano /etc/mongod.conf
+```
+en bindIp: IP_PC_Interna o localhost 
+```
 security:
-  authorization: "enabled" o "disabled"  # Para autenticar o no
-
->> sudo service mongod restart 
+  authorization: "enabled" # Para autenticar o no "enabled" o "disabled"
+```
+```
+sudo service mongod restart 
+```
 
 por último en config/develop.json, actualizar conexión a DB

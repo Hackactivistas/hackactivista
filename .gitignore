@@ -11,6 +11,7 @@ certificado_ssl.pem
 
 applications/seo/migrations/*
 applications/users/migrations/*
+applications/emails/migrations/*
 llave_privada_ssl.key
 bin
 include
