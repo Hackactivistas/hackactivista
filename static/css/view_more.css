@@ -1,0 +1,17 @@
+.morecontent {
+    display: none;
+}
+
+.morelink {
+    display: block;
+    cursor: pointer;
+    color: #2196f3;
+}
+
+.morelink:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+}

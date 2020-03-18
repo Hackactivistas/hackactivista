@@ -1,0 +1,45 @@
+
+#GitIgnore de todas las migraciones
+# aplicaciones/usuarios/migrations/*
+media/*
+#gitIgnore de Setting.py
+public/*
+whatssapo/__pycache__/*
+config/*.json
+apps/whatsapp/config_ws.json
+certificado_ssl.pem
+
+applications/seo/migrations/*
+applications/users/migrations/*
+llave_privada_ssl.key
+bin
+include
+lib
+public/*
+# File types #
+##############
+*.pyo
+*.pyc
+*.swo
+*.swp
+*.swn
+*.log
+
+
+# PyCharm project settings
+.idea
+.vscode
+# Directories #
+###############
+logs/
+log/
+
+# OS generated files #
+######################
+.DS_Store
+*.db
+Icon
+Thumbs.db
+*~HASLLAs
+,9   					
+logfile
