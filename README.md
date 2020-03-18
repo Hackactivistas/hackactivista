@@ -23,7 +23,7 @@ git clone git@github.com:alejandrohdo/hackactivista.git
 cp hackactivista/hackactivista/settings/config_example.json hackactivista/hackactivista/settings/config.json && cd hackactivista
 ```
 ```
-pip install -r install requeriments.txt
+pip install -r install develop.txt
 ```
 Confgurar su DB, antes de ejecutar las migraciones.. 
 
