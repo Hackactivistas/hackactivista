@@ -12,15 +12,10 @@ with open(fileConfig) as data_file:
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'NAME': dataConfig.get('mongo-connection').get('database_name'),
-        'HOST': dataConfig.get('mongo-connection').get('host'),
-        'PORT': dataConfig.get('mongo-connection').get('port'),
-        'USER': dataConfig.get('mongo-connection').get('user'),
-        'PASSWORD': dataConfig.get('mongo-connection').get('password')
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = dataConfig.get('secret_key').get('key')
