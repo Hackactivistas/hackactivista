@@ -88,6 +88,14 @@ form.cmxform .gray * {
    src: url('/static/fonts/rubik/Rubik-Medium.ttf');
 }
 
+@font-face{
+   font-family:times; 
+   src: url('/static/fonts/times/Times-Bold.ttf');
+}
+@font-face{
+   font-family:karla; 
+   src: url('/static/fonts/Karla/Karla-Regular.ttf');
+}
 /*munu principal*/
 
 .nav1{
@@ -383,7 +391,7 @@ a:focus {
   border-top-left-radius: 0;
 }
 .menu .menu-nav > li:hover{
-  border-bottom: solid red;
+  border-bottom: solid #4A4A4A;
 }
 }
 .menu .menu-nav > li > a:hover,
@@ -436,4 +444,40 @@ a:focus {
 }
 .pt-6{
     padding-top: 6em;
+}
+.sombra{
+    background-color: #48DD8F;
+    width: 57%;
+    height: 1.3em;
+    position: relative;
+    top: 68px;
+    left: 10.2em;
+}
+.title{
+    font-size: 50px;
+    font-family: times;
+    font-weight: bold;
+}
+
+.font-k{
+    font-family: karla;
+}
+.c-b{
+    color: black;
+}
+.size15{
+    font-size: 15px;
+}
+.size11{
+    font-size: 11px;
+}
+.logo-index{
+    font-family: rubik;
+    font-weight: bold;
+    font-size: 20px;
+}
+@media (max-width: 767px) {
+ .title{
+    font-size: 38px;
+ }  
 }
