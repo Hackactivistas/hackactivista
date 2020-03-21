@@ -20,10 +20,10 @@ Nuestro objetivo : Impulsar un sistema de Gobernación Abierta, desde la interdi
 git clone git@github.com:alejandrohdo/hackactivista.git
 ```
 ```
-cp hackactivista/hackactivista/settings/config_example.json hackactivista/hackactivista/settings/config.json && cd hackactivista
+cp hackactivista/config/example_config.json_copy hackactivista/config/develop.json && cd hackactivista
 ```
 ```
-pip install -r install develop.txt
+pip install -r requirements/develop.txt
 ```
 Confgurar su DB, antes de ejecutar las migraciones.. 
 
