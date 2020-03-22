@@ -542,12 +542,14 @@ a:focus {
     font-size: 38px;
  }  
 }
-
+.cont-index{
+    min-height: calc(100vh - 275px);
+}
 /*footer*/
 .site-footer
 {
   background-color:#26272b;
-  padding:45px 0 20px;
+  padding: 10px 0 0;
   font-size:15px;
   line-height:24px;
   color:#737373;
