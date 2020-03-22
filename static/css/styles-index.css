@@ -1,0 +1,42 @@
+.size14{
+    font-size: 12px;
+}
+.pt-6{
+    padding-top: 6em;
+}
+.sombra{
+    background-color: #48DD8F;
+    width: 57%;
+    height: 1.3em;
+    position: relative;
+    top: 68px;
+    left: 10.2em;
+}
+.title{
+    font-size: 50px;
+    font-family: times;
+    font-weight: bold;
+}
+
+.font-k{
+    font-family: karla;
+}
+.c-b{
+    color: black;
+}
+.size15{
+    font-size: 15px;
+}
+.size11{
+    font-size: 11px;
+}
+.logo-index{
+    font-family: rubik;
+    font-weight: bold;
+    font-size: 20px;
+}
+@media (max-width: 767px) {
+ .title{
+    font-size: 38px;
+ }  
+}
