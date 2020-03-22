@@ -3,6 +3,52 @@
 Name: cmxform Styles
 para pintar formularios con rojo con Jquery 
 ***********************************/
+/* COlORES HACKACTIVISTA*/
+/*
+se utiliza de esta forma
+.clase{
+  color:var(--color1);
+}
+*/
+:root {
+  --color1:#48DD8F;
+  --color2:#FD5A58;
+  --color3:#43A6F6;
+  --color4:#9FE110;
+  --color5:#FFC71D;
+}
+/* END COLORES HACKTIVISTAS*/
+
+.font-primary{
+ font-family:times;
+ font-weight: bold; 
+}
+.font-secundary{
+  font-family: ;
+}
+/*Animaciones*/
+.move-left{
+  position: relative;
+  margin-left:0px;
+  transition: all .5s ease-out;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -ms-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+}
+.move-left:hover{
+  transition:;
+  all:.38s ease-out;
+  margin-left:10px;
+  -webkit-transition: all .38s ease-out;
+  -moz-transition: all .38s ease-out;
+  -ms-transition: all .38s ease-out;
+  -o-transition: all .38s ease-out;
+}
+/*Animaciones*/
+
+
+
 form.cmxform label.error, label.error {
     /* remove the next line when you have trouble in IE6 with labels in list */
     color: red;
@@ -357,6 +403,7 @@ a:focus {
 .menu {
 
   position: fixed;
+  background: #f8f8f8;
   border-bottom: .5px solid #cacaca;
   top: 0;
   right: 0;
@@ -439,7 +486,7 @@ a:focus {
 .menu .menu-nav > li:hover{
   border-bottom: solid #4A4A4A;
 }
-}
+
 .menu .menu-nav > li > a:hover,
 .menu .menu-nav > li > a:focus {
   background-color: transparent;
@@ -563,11 +610,11 @@ a:focus {
 }
 .site-footer h6
 {
-  color:#fff;
+  color:#f5f5f5;
   font-size:16px;
-  text-transform:uppercase;
+  /*text-transform:uppercase;*/
   margin-top:5px;
-  letter-spacing:2px
+ 
 }
 .site-footer a
 {
@@ -706,9 +753,9 @@ a:focus {
     margin-right:0;
     font-weight:600
   }
-}
+}/*
 .div-footer{
-    border-left:solid 0.5em #48DD8F;
+    border-left:solid 0.2em var(--color1);
 
-}
+}*/
 /**/
