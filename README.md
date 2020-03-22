@@ -14,10 +14,21 @@ Nuestro objetivo : Impulsar un sistema de Gobernación Abierta, desde la interdi
 - mongodb-4.0
 - django2.2
 
+### Instalacion de dependencias del S.O(ubuntu 18.04)
+
+Si no tiene instalado pip y virtualenv
+```
+sudo apt update && sudo apt install python3-pip	&& sudo pip3 install virtualenv 
+```
+
 ### Ejecución en modo desarrollo:
 
 ```
 git clone git@github.com:alejandrohdo/hackactivista.git
+```
+creación y activación de un entorno virtual
+```
+virtualenv -p python3 env_hackactivista && source env_hackactivista/bin/activate
 ```
 ```
 cp hackactivista/config/example_config.json_copy hackactivista/config/develop.json && cd hackactivista
@@ -27,12 +38,15 @@ pip install -r requirements/develop.txt
 ```
 Confgurar su DB, antes de ejecutar las migraciones.. 
 
+Ejecución de migraciones
 ```
 ./manage.py makemigrations && ./manage.py migrate
 ```
+Creacion de super usuario
 ```
 ./manage.py createsuperuser
 ```
+Ejecuación en modo desarrollo
 ```
  ./manage.py runserver
 ```
