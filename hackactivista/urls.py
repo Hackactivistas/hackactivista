@@ -35,6 +35,9 @@ urlpatterns = [
     url(r'^$', Index_principal.as_view(), name="index_principal"),
     url(r'quienes-somos', TemplateView.as_view(
         template_name='quienes-somos.html'), name='p_quienes_somos'),
+
+    url(r'nuestros-proyectos', TemplateView.as_view(
+        template_name='nuestros-proyectos.html'), name='p_nuestros_proyectos'),
     # politicas y privacidad para pedir correo al memento de auntenticacion con redes socia.
     # url(r'^politicas$', Politicas.as_view(), name="p_politicas"),
     # url(r'^terminos$', Terminos.as_view(), name="p_terminos"),

@@ -40,10 +40,6 @@ form.cmxform .gray * {
     color: blue;
 }
 
-.menu {
-    margin-left: 2em;
-}
-
 .btn_modal {
     text-align: right;
 }
@@ -66,6 +62,24 @@ form.cmxform .gray * {
 .parrafo_main {
     margin: 2em;
 }
+
+
+/* nuestros proyectos */
+
+
+.icon_enlace{
+  height: 100%;
+  width: 22px;
+  margin-left: .8em;
+  display: inline-flex;
+
+}
+.icon_enlace img{
+width: 100%;top:0;
+
+}
+  
+/* fin de nuestros proyectos */
 
 @media screen and (max-width: 640px) {
     .menu {
@@ -176,6 +190,37 @@ a:focus {
   background-color: #004760;
   border-radius: 0 0 0 4px;
   background-clip: padding-box;  
+}
+
+.rayita{ 
+  position: relative;  
+}
+
+.rayita:after {
+  position: absolute;
+  content: "";
+  width: 95%;
+  display: block;
+  border-bottom: 1vw solid #FD5A58;
+  bottom:.1em ;
+  z-index: -1;
+  right: 0;
+
+}
+.rs_azul{ 
+  position: relative;  
+}
+
+.rs_azul:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  display: block;
+  border-bottom: 1.2vw solid #43A6F6;
+  bottom:.1em ;
+  z-index: -1;
+  right: 0;
+
 }
 @media (min-width: 768px) {
   .dpgable-menu {    
@@ -310,8 +355,9 @@ a:focus {
 }
 
 .menu {
-  background-color: white;
+
   position: fixed;
+  border-bottom: .5px solid #cacaca;
   top: 0;
   right: 0;
   left: 0;
@@ -458,6 +504,21 @@ a:focus {
     font-family: times;
     font-weight: bold;
 }
+
+.title_35{
+  font-size: 35px;
+  font-family: times;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.sub_title_20{
+  font-size: 20px;
+  font-family: times;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
 
 .font-k{
     font-family: karla;
