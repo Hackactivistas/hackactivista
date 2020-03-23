@@ -42,5 +42,6 @@ log/
 Icon
 Thumbs.db
 *~HASLLAs
-,9   					
 logfile
+
+.python-version
