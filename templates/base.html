@@ -58,6 +58,7 @@
     {% block css %} {% endblock %}
 
 </head>
+
 <body>
 {% include 'messages.html' %}
 {% include 'header.html' %}
@@ -104,6 +105,33 @@
 </script>
 {% block js %}
 {% endblock %}
+<!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v6.0'
+          });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+      <!-- Your customer chat code -->
+    <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="101423784830598"
+        theme_color="#4563ff"
+        logged_in_greeting="Hola, ¡estoy listo para ayudarte!"
+        logged_out_greeting="Hola, ¡estoy listo para ayudarte!">
+  </div>
 </body>
 
 {% include "footer.html" %}

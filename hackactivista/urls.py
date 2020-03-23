@@ -32,7 +32,6 @@ urlpatterns = [
     # admin
     url(r'^administrador/', admin.site.urls),
     url(r'^$', Index_principal.as_view(), name="index_principal"),
-    url(r'^$', Index_principal.as_view(), name="index_principal"),
     url(r'quienes-somos', TemplateView.as_view(
         template_name='quienes-somos.html'), name='p_quienes_somos'),
 
