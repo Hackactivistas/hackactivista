@@ -14,7 +14,7 @@ Nuestro objetivo : Impulsar un sistema de Gobernación Abierta, desde la interdi
 - mongodb-4.0
 - django2.2
 
-### Instalacion de dependencias del S.O(ubuntu 18.04)
+### Instalacion de dependencias en S.O(ubuntu 18.04)
 
 Si no tiene instalado pip y virtualenv
 ```
