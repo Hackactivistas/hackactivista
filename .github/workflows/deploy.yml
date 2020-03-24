@@ -42,8 +42,15 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - run: >-
-          ssh ${DEPLOY_USER}@${DEPLOY_HOST} -t "ls -al"
+      - run: |
+          ssh-keyscan ${DEPLOY_HOST} >> ~/.ssh/known_hosts
+          ssh ${DEPLOY_USER}@${DEPLOY_HOST} -A "ls -al"
         env:
           DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
           DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2.0.0
+        env:
+          SLACK_MESSAGE: 'Nueva version de https://hacktivistas.com/ esta en linea! :rocket:'
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
