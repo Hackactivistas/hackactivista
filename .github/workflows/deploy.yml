@@ -29,7 +29,8 @@ jobs:
           pip install -r requirements.txt
           cp config/example_config.json_copy config/develop.json
 
-      - run: |
+      - name: Run tests
+        run: |
           source pyenv/bin/activate
           python manage.py check
 
