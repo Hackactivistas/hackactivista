@@ -32,4 +32,5 @@ jobs:
         cp config/example_config.json_copy config/develop.json
 
     - run: |
+        source pyenv/bin/activate
         python manage.py check
