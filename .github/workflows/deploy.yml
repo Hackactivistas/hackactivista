@@ -9,6 +9,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-python@v1
+        with:
+          python-version: 3.6
+
+      - uses: actions/cache@v1
+        with:
+          path: ./pyenv
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Prepare dependencies
+        run: |
+          python -m venv ./pyenv
+          source pyenv/bin/activate
+          pip install -r requirements.txt
+          cp config/example_config.json_copy config/develop.json
+
+      - run: |
+          python manage.py check
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [ test ]
+    steps:
       - uses: webfactory/ssh-agent@v0.2.0
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
