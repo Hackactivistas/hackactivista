@@ -43,7 +43,7 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - run: >-
-          ssh ${DEPLOY_USER}@${DEPLOY_HOST} -t "ls -al"
+          ssh ${DEPLOY_USER}@${DEPLOY_HOST} -At "ls -al"
         env:
           DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
           DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
