@@ -16,14 +16,21 @@ with open(fileConfig) as data_file:
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'djongo',
+#         'NAME': dataConfig.get('mongo-connection').get('database_name'),
+#         'HOST': dataConfig.get('mongo-connection').get('host'),
+#         'PORT': dataConfig.get('mongo-connection').get('port'),
+#         'USER': dataConfig.get('mongo-connection').get('user'),
+#         'PASSWORD': dataConfig.get('mongo-connection').get('password')
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'NAME': dataConfig.get('mongo-connection').get('database_name'),
-        'HOST': dataConfig.get('mongo-connection').get('host'),
-        'PORT': dataConfig.get('mongo-connection').get('port'),
-        'USER': dataConfig.get('mongo-connection').get('user'),
-        'PASSWORD': dataConfig.get('mongo-connection').get('password')
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
