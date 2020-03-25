@@ -41,6 +41,9 @@ urlpatterns = [
     url(r'team-hackactivistas', TemplateView.as_view(
         template_name='team-hackactivistas.html'), name='p_team_hackactivistas'),
 
+     url(r'pagina-interes', TemplateView.as_view(
+        template_name='pagina-interes.html'), name='p_pagina-interes'),
+
     # politicas y privacidad para pedir correo al memento de auntenticacion con redes socia.
     # url(r'^politicas$', Politicas.as_view(), name="p_politicas"),
     # url(r'^terminos$', Terminos.as_view(), name="p_terminos"),
