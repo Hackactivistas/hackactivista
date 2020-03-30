@@ -51,7 +51,7 @@
             width: 100%;
             height: 100%;
             z-index: 9999;
-            opacity: 0.50;
+            opacity: 0.9;
             background: url({% static 'preloader/Preloader_1.gif'%}) center no-repeat #fff;
         }
     </style>
@@ -62,8 +62,8 @@
 <body>
 {% include 'messages.html' %}
 {% include 'header.html' %}
-<div class="se-pre-con"></div>
-<div class="site-content"></div>
+<!--<div class="se-pre-con"></div>
+<div class="site-content"></div>-->
 {% block contenido %}
 {% endblock %}
 <!-- Div para linkear archivo vuejs, las vistas solo se activan cuando coinciden con las rutas definidas en el archivo App.js -->
@@ -96,13 +96,13 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
 
-<script>
+<!--<script>
     $(window).on('load', function () {
         // Animate loader off screen
         $(".site-content").show();
         $(".se-pre-con").fadeOut();
     });
-</script>
+</script>-->
 {% block js %}
 {% endblock %}
 <!-- Load Facebook SDK for JavaScript -->
