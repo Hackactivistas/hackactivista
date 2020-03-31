@@ -35,14 +35,17 @@ urlpatterns = [
     url(r'quienes-somos', TemplateView.as_view(
         template_name='quienes-somos.html'), name='p_quienes_somos'),
 
-    url(r'nuestros-proyectos', TemplateView.as_view(
-        template_name='nuestros-proyectos.html'), name='p_nuestros_proyectos'),
+    url(r'proyectos/$', TemplateView.as_view(
+        template_name='proyectos.html'), name='p_nuestros_proyectos'),
 
     url(r'team-hackactivistas', TemplateView.as_view(
         template_name='team-hackactivistas.html'), name='p_team_hackactivistas'),
 
-     url(r'pagina-interes', TemplateView.as_view(
+    url(r'pagina-interes', TemplateView.as_view(
         template_name='pagina-interes.html'), name='p_pagina-interes'),
+
+    url(r'proyectos/alerta-minsa', TemplateView.as_view(
+        template_name='alerta-minsa.html'), name='p_alerta-minsa'),
 
     # politicas y privacidad para pedir correo al memento de auntenticacion con redes socia.
     # url(r'^politicas$', Politicas.as_view(), name="p_politicas"),
