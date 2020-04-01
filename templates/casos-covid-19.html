@@ -1,0 +1,19 @@
+{% extends "base-not-footer.html" %}
+{% block title %}Hackactivistas Perú | Evolución de casos en Perú{% endblock title %}
+{% load static %}
+{% block contenido %}
+<div class="container-fluid pt-6 cont-index">
+    <div class="">
+        <h3>Evolución de casos COVID-19 en Perú</h3>
+        <iframe id=""
+            title="Evolución de casos COVID-19 en Perú"
+            src="https://covid19.orcebot.com/?fbclid=IwAR0OLKrErOgUR7tWpwbf0TK5agASvwPsgh8nYcGL95NAWxzsfF6mDCZvCKQ" 
+            frameborder="0" style="overflow:hidden; 
+         display:block; position: absolute; height: 100%; width: 100%">
+        </iframe>
+        <p>Fuente: <a href="https://covid19.orcebot.com/?fbclid=IwAR0OLKrErOgUR7tWpwbf0TK5agASvwPsgh8nYcGL95NAWxzsfF6mDCZvCKQ" target="_black">D. Estadística UNI </a></p>
+    </div>
+</div>
+
+{% endblock contenido %}
+
