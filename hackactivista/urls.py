@@ -48,6 +48,15 @@ urlpatterns = [
 
     url(r'proyectos/alerta-minsa', TemplateView.as_view(
         template_name='alerta-minsa.html'), name='p_alerta-minsa'),
+    
+    url(r'proyectos/bio-covid19', TemplateView.as_view(
+        template_name='bio-covid19.html'), name='p_bio-covid19'),
+
+    url(r'proyectos/chat-covid19', TemplateView.as_view(
+        template_name='chat-covid19.html'), name='p_chat-covid19'),
+        url(r'proyectos/kitchay-coronavida', TemplateView.as_view(
+        template_name='kitchay-coronavida.html'), name='p_kitchay-coronavida'),
+    
 
     # politicas y privacidad para pedir correo al memento de auntenticacion con redes socia.
     # url(r'^politicas$', Politicas.as_view(), name="p_politicas"),
