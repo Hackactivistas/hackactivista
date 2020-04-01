@@ -51,19 +51,6 @@ Ejecuación en modo desarrollo
  ./manage.py runserver
 ```
 
-### ¿Cómo contribuir? 
-Las contribuciones son las que hacen que la comunidad de código abierto sea un lugar increíble para aprender y aportar. Cualquier contribución que haga es muy apreciada.
-
-Este proyecto existe gracias a todas las personas que contribuyen. [ Contribuir]
-
-
-Opcion 1: Contáctenos a +51983679449, le daremos Maintainerpermiso para comprometerte libremente.
-
-Opcion 2: Bifurca el proyecto
-Crea tu rama de características ( git checkout -b feature/AmazingFeature)
-Compromete tus cambios ( git commit -m 'Add some AmazingFeature')
-Empujar a la rama ( git push origin feature/AmazingFeature)
-Abrir una solicitud de extracción
 
 ### Configuración de mongodb, opcional
 Nota: El proyecto en desarrollo por defecto está configurado con SqlLite3
@@ -89,3 +76,20 @@ sudo service mongod restart
 ```
 
 por último en config/develop.json, actualizar conexión a DB
+
+### ¿Cómo puedo contribuir? 
+Las contribuciones son las que hacen que la comunidad de código abierto sea un lugar increíble para aprender y aportar. Cualquier contribución que haga es muy apreciada.
+
+Este proyecto existe gracias a todas las personas que contribuyen. [[Contribuidores](CONTRIBUTING.md)]
+
+
+Opcion 1: Contáctenos a [+51983679449](https://api.whatsapp.com/send?phone=51938438089&text=Hola,%20quiero%20ser%20contribuidor%20en%20github%20de%20hackactivistas.!), le daremos acceso como contribuidor para comprometerte libremente.
+
+Opcion 2: Bifurca el proyecto
+Crea tu rama de características ( git checkout -b develop)
+
+Compromete tus cambios ( git commit -m 'Add some AmazingFeature')
+
+Empujar a la rama ( git push origin develop)
+
+Abrir una solicitud de extracción
