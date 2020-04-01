@@ -1,6 +1,12 @@
 ## Hackactivistas - Proyectos
+Somos un movimiento voluntario de activistas de la información al servicio de una sociedad abierta, nuestra base de fundamenta en la transparencia y colaboración a partir de la integración cultural.
+Si te sientes identificado únete a este movimiento.
+
+Nuestro objetivo : Impulsar un sistema de Gobernación Abierta, desde la interdisciplinaria entre hackactivista, gobierno y sociedad civil.
+
 ![Arquitectura](arquitectura-hackactivista.png)
 
+## Proyectos:
 ### Alerta MINSA 
 
 Trazabilidad para infectados por geolocalización y ubigeo telefónico.
@@ -17,10 +23,7 @@ Orientación a la ciudadanía para el rápido despistaje vía chatbot.
 
 Desarrollo de un kit de salvaguarda para la cuarentena.
 
-Somos un movimiento voluntario de activistas de la información al servicio de una sociedad abierta, nuestra base de fundamenta en la transparencia y colaboración a partir de la integración cultural.
-Si te sientes identificado únete a este movimiento.
 
-Nuestro objetivo : Impulsar un sistema de Gobernación Abierta, desde la interdisciplinaria entre hackactivista, gobierno y sociedad civil.
 
 ### Requisitos:
 - git
