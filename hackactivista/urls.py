@@ -37,6 +37,8 @@ urlpatterns = [
 
     url(r'proyectos/$', TemplateView.as_view(
         template_name='proyectos.html'), name='p_nuestros_proyectos'),
+    url(r'coronavirus/evolucion-casos-covid-19-peru/$', TemplateView.as_view(
+        template_name='casos-covid-19.html'), name='p-casos-covid-19'),
 
     url(r'team-hackactivistas', TemplateView.as_view(
         template_name='team-hackactivistas.html'), name='p_team_hackactivistas'),

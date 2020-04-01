@@ -51,7 +51,22 @@ Ejecuación en modo desarrollo
  ./manage.py runserver
 ```
 
-### Configuración de mongodb
+### ¿Cómo contribuir? 
+Las contribuciones son las que hacen que la comunidad de código abierto sea un lugar increíble para aprender y aportar. Cualquier contribución que haga es muy apreciada.
+
+Este proyecto existe gracias a todas las personas que contribuyen. [ Contribuir]
+
+
+Opcion 1: Contáctenos a +51983679449, le daremos Maintainerpermiso para comprometerte libremente.
+
+Opcion 2: Bifurca el proyecto
+Crea tu rama de características ( git checkout -b feature/AmazingFeature)
+Compromete tus cambios ( git commit -m 'Add some AmazingFeature')
+Empujar a la rama ( git push origin feature/AmazingFeature)
+Abrir una solicitud de extracción
+
+### Configuración de mongodb, opcional
+Nota: El proyecto en desarrollo por defecto está configurado con SqlLite3
 en terminal ejecutar
 ```
  use admin
