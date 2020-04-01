@@ -80,7 +80,7 @@ por último en config/develop.json, actualizar conexión a DB
 ### ¿Cómo puedo contribuir? 
 Las contribuciones son las que hacen que la comunidad de código abierto sea un lugar increíble para aprender y aportar. Cualquier contribución que haga es muy apreciada.
 
-Este proyecto existe gracias a todas las personas que contribuyen. [[Contribuidores](.github/CONTRIBUTING.md)]
+Este proyecto existe gracias a todas las personas que contribuyen. [[Contribuidores](CONTRIBUTING.md)]
 
 
 Opcion 1: Contáctenos a [+51983679449](https://api.whatsapp.com/send?phone=51938438089&text=Hola,%20quiero%20ser%20contribuidor%20en%20github%20de%20hackactivistas.!), le daremos acceso como contribuidor para comprometerte libremente.
