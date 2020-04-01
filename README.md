@@ -1,10 +1,29 @@
-## Proyecto Chatbot y trazabilidad para el estado peruano #CoronaVirus
-![Arquitectura](arquitectura-hackactivista.png)
-
+## Hackactivistas - Proyectos
 Somos un movimiento voluntario de activistas de la información al servicio de una sociedad abierta, nuestra base de fundamenta en la transparencia y colaboración a partir de la integración cultural.
 Si te sientes identificado únete a este movimiento.
 
 Nuestro objetivo : Impulsar un sistema de Gobernación Abierta, desde la interdisciplinaria entre hackactivista, gobierno y sociedad civil.
+
+![Arquitectura](arquitectura-hackactivista.png)
+
+## Proyectos:
+### Alerta MINSA 
+
+Trazabilidad para infectados por geolocalización y ubigeo telefónico.
+
+### BioCOVID19 
+
+Potenciales inhibidores moleculares de la proteasa de la SARS-CoV-2.
+
+### ChatCOVID19 
+
+Orientación a la ciudadanía para el rápido despistaje vía chatbot.
+
+### Kitchay CoronaVida 
+
+Desarrollo de un kit de salvaguarda para la cuarentena.
+
+
 
 ### Requisitos:
 - git
