@@ -4,9 +4,8 @@
 media/*
 #gitIgnore de Setting.py
 public/*
-whatssapo/__pycache__/*
+hackactivista/__pycache__/*
 config/*.json
-apps/whatsapp/config_ws.json
 certificado_ssl.pem
 
 applications/seo/migrations/*
@@ -25,6 +24,7 @@ public/*
 *.swp
 *.swn
 *.log
+*.sqlite3
 
 
 # PyCharm project settings
