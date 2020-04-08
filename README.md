@@ -7,13 +7,9 @@ Nuestro objetivo : Impulsar un sistema de Gobernación Abierta, desde la interdi
 ![Arquitectura](arquitectura-hackactivista.png)
 
 ## Proyectos:
-### Alerta MINSA 
+### Diagnóstico de COVID19 con IA
 
-Trazabilidad para infectados por geolocalización y ubigeo telefónico.
-
-### BioCOVID19 
-
-Potenciales inhibidores moleculares de la proteasa de la SARS-CoV-2.
+Aplicación de diagnóstico clínico directo mediante imágenes de radiografía de tórax de casos de COVID-19, con inteligencia Artificial, [+referencia](https://github.com/lindawangg/COVID-Net)
 
 ### ChatCOVID19 
 
