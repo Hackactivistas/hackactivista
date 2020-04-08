@@ -5,38 +5,39 @@
 
 <div class="container">
   {% if not request.user.is_authenticated %}
+  <br>
   <div class="row justify-content-center ">
 
-  	   <form action=".?next={{ redirect_to }}" method="post" class="form-signin">{% csrf_token %}
+       <form action=".?next={{ redirect_to }}" method="post" class="form-signin">{% csrf_token %}
       {% if form.errors %}
-		      <div class="alert alert-danger" role="alert">
-		          {{ form.errors }}
-		      </div>
-		{% endif %}
+              <div class="alert alert-danger" role="alert">
+                  {{ form.errors }}
+              </div>
+        {% endif %}
     <div class="card col-md-12">
 
         <div class="card-body mx-4">
 
            
             <div class="text-center">
-                <h3 class="dark-grey-text mb-5"><strong>Iniciar sesión - Hackactivista</strong></h3>
+                <h3 class="dark-grey-text mb-5"><strong>Iniciar sesión</strong></h3>
             </div>
 
             <!--Body-->
 
-            <div class="md-form">
-                <input type="text" id="Form-username" name="username" class="form-control">
-                <label for="Form-email1">Usuario</label>
+            <div class="row-form">
+                <label for="Form-email1">Correo:</label>
+                <input type="email" id="Form-email" name="email" class="form-control">
             </div>
 
-            <div class="md-form pb-3">
+            <div class="row-form pb-3">
+                <label for="Form-pass1">Contraseña:</label>
                 <input type="password" id="Form-pass1" name="password" class="form-control">
-                <label for="Form-pass1">Contraseña</label>
-               <!-- <a href="#" class="blue-text ml-1"><p class="font-small blue-text d-flex justify-content-end">Olvidastes tu Contraseña?</p></a> -->
-            </div> 
+                <a href="/password_reset" class="blue-text ml-1"><p class="font-small blue-text d-flex justify-content-end">Olvidastes tu Contraseña?</p></a>
+            </div>
 
             <div class="text-center mb-3">
-                <button type="submit" class="btn btn-primary btn-block ">Iniciar<i class="fa fa-sign-in ml-1"></i> </button>
+                <button type="submit" class="btn btn-rounded  btn_col ">Iniciar<i class="fa fa-sign-in ml-1"></i> </button>
             </div>
 
 
@@ -44,11 +45,11 @@
 
         <!--Footer-->
         <div class="modal-footer mx-5 pt-3 mb-1">
-            {# <p class="font-small grey-text d-flex justify-content-end">No eres miembro? <a href="#" class="blue-text ml-1"> Registrate</a></p> #}
+            <p class="font-small grey-text d-flex justify-content-end">No eres miembro? <a href="/registrarse" class="blue-text ml-1"> Registrate</a></p>
         </div>
 
     </div>
-</form>	
+</form> 
   </div>
     {% else %}
     <p>Ya inicio su sesión <a href=" {% url 'cerrar_sesion' %} ">Cerrar</a></p>

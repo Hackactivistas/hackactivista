@@ -1,11 +1,11 @@
 {% extends "base-not-footer.html" %}
-{% block title %}Registro de Cuenta{% endblock title %}
+{% block title %}Hackactivistas | Registro de Cuenta{% endblock title %}
 {% load static %}
 {% block contenido %}
     <div class="container">
+    <br>
     {% if not request.user.is_authenticated %}  
       <div class="row justify-content-center ">
-
       <form role="form" method="POST" enctype="multipart/form-data">{% csrf_token %}
         {% if form.errors %}
             <div class="alert alert-danger" role="alert">
@@ -19,9 +19,8 @@
 
            
             <div class="text-center">
-                <h3 class="dark-grey-text mb-5"><strong>Registrarse</strong></h3>
+                <h3 class="dark-grey-text mb-5"> <strong>Registrarse</strong></h3>
             </div>
-
             <!--Body-->
            <div class="md-form ">
                 {{form.usuario}}
@@ -29,27 +28,22 @@
             </div>
             <div class="md-form">
                  {{form.email}}
-                  <label for="id_celluar" class="">Correo:</label>
-            </div>
-            <div class="md-form">
-                <input type="text" name="celular" class="form-control" maxlength="12" required="" id="id_celluar">
-                <label for="id_celluar" class="">Celular:</label>
+                  {{form.email.label_tag}}
             </div>
 
             <div class="md-form pb-3">
                  {{form.password}}
                 {{form.password.label_tag}}
             </div>
-
             <div class="text-center mb-3">
-                <button type="submit" class="btn btn-primary btn-block ">Siguiente<i class="fa fa-sign-in ml-1"></i> </button>
+                <button type="submit" class="btn btn-rounded  btn_col">Siguiente<i class="fa fa-sign-in ml-1"></i> </button>
             </div>    
 
         </div>
 
         <!--Footer-->
         <div class="modal-footer mx-5 pt-3 mb-1">
-          <span class="tiene_cuenta">¿Ya tienes una cuenta?<a href=" {% url 'iniciar_sesion' %} ">Iniciar sesión?</a></span>
+          <span class="tiene_cuenta">¿Ya tienes una cuenta?<a href=" {% url 'iniciar_sesion' %} "> Iniciar sesión?</a></span>
         </div>
 
       </form>

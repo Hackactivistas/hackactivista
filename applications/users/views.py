@@ -121,9 +121,11 @@ class Index_principal(TemplateView):
 def userlogin(request):
     next = request.GET.get('next', '/')
     if request.method == "POST":
-        username = request.POST['username']
+        email = request.POST['email']
         password = request.POST['password']
-        user = authenticate(username=username, password=password)
+        print("email>", email)
+        print("password>", password)
+        user = authenticate(email=email, password=password)
         # user = UsernameOrEmailBackend()
         if user is not None:
             if user.is_active:
