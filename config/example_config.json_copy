@@ -13,5 +13,8 @@
         "db_auth": "admin",
         "user": "",
         "password": ""
-    }
+    },
+    "api_diagnosis_covid19":{
+        "apikey":"xxxx"
+    },
 }
