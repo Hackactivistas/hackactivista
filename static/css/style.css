@@ -903,25 +903,25 @@ a:focus {
   .file-upload-btn {
   
     margin: 0 ;
-    color: #fff;
-    background: #1FB264;
+    color: #666666;
+    background: #cacaca;
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
-  
     transition: all .2s ease;
     outline: none;
+    font-size: 14px;
     text-transform: uppercase;
     font-weight: 700;
   }
   
-  .file-upload-btn:hover {
-    background: #1AA059;
-    color: #ffffff;
-    transition: all .2s ease;
-    cursor: pointer;
-  }
-  
+    .file-upload-btn:hover {
+        background: #fff;
+        color: #1AA059;;
+        transition: all .2s ease;
+        cursor: pointer;
+    }
+    
   .file-upload-btn:active {
     border: 0;
     transition: all .2s ease;
@@ -929,7 +929,7 @@ a:focus {
   
   .file-upload-content {
     display: none;
-    text-align: center;
+    /*text-align: center;*/
   
   }
   
@@ -937,6 +937,7 @@ a:focus {
     position: absolute;
     margin: 0;
     padding: 0;
+    padding: 1em;
     width: 100%;
     height: 100%;
     outline: none;
@@ -945,17 +946,15 @@ a:focus {
   }
   
   .image-upload-wrap {
-      max-width: 400px;
-      max-height: 400hpx;
-    margin: 20px auto;
-    border: 4px dashed #1FB264;
+    max-width: 400px;
+    border: 3px dashed #1FB264;
     position: relative;
   }
   
   .image-dropping,
   .image-upload-wrap:hover {
-    background-color: #1FB264;
-    border: 4px dashed #ffffff;
+    background-color: rgba(241, 241, 241, 0.5);
+    border: 3px dashed #1FB264;
   }
   
   .image-title-wrap {
@@ -979,20 +978,22 @@ a:focus {
     font-size: 20px;
    
     color: #15824B;
-    padding: 60px 0;
+    padding: 40px 0;
   }
   
   .file-upload-image {
-    max-height: 400px;
+
     max-width: 400px;
+    width: 100%;
+    border:2px solid inset rgb(126, 126, 126, .5)
   
-    padding: 0px 20px 0px 20px ;
   }
   
   .remove-image {
     
     margin: 0;
     top: -25px;
+    right: 20px;
     position: relative;
     color: #fff;
     background: #cd4535;
@@ -1018,5 +1019,39 @@ a:focus {
     border: 0;
     transition: all .2s ease;
   }
+
+
+  .btn-analizar {
+    margin: 0;
+    max-width: 400px;
+    position: relative;
+    color: #fff;
+    background: #1FB264;
+    border: none;
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 150px;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    -webkit-border-radius: 0px 0px 4px 4px;
+    -moz-border-radius: 150px;
+    -ms-border-radius: 150px;
+    -o-border-radius: 150px;
+}
+  
+  .btn-analizar:hover {
+    background: #1FB264;
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+  }
+  
+  .btn-analizar:active {
+    border: 0;
+    transition: all .2s ease;
+  }
+
 
 /**/

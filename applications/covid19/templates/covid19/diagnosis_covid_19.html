@@ -6,24 +6,25 @@
 	<div class="container">
 		<div class="row mt-1 mb-4">
 			<div class="col-md-6 ">
-                <div class="col-md-12 mb-4">
+                
                     
                     <h1 class="title title_35"><span class="rs_azul">DIAGNOSTICO CON INTELIGENCIA ARTIFICIAL</span></h1>
                     <h4>Decripción</h4>
                     <p>Scented earl grey assam rose hips earl grey caffeine taro hong kong-style milk shoumei shrub masala chai teapot hong kong-style milk. Assam camellia sinensis kukicha earl grey theanine brew teapot bamboo whisk orange pekoe lapsang souchong hot green teacup infusion.</p>
-                </div>
+              
        
             
             </div>
-            <div class="col-md-6 ">
-               
-
-              
+            <div class="col-md-6 ">            
                 <div class="file-upload">                
                     <div class="image-upload-wrap">
                         <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
                         <div class="drag-text">
                             <h3>Ingresa la imagen de rayos x</h3>
+                            <div class="text-center">
+                                <button class="file-upload-btn text-center" type="button" onclick="$('.file-upload-input').trigger( 'click' )"> <i class="fas fa-cloud-upload-alt"></i> Subir Imagen</button>
+                            </div>
+                            <br>
                         </div>
                     </div>
                     <div class="file-upload-content">
@@ -31,12 +32,11 @@
                             <button type="button" onclick="removeUpload()" class="remove-image"><i class="fas fa-trash-alt"></i></button>
                         </div>
                         <img class="file-upload-image" src="#" alt="your image" />
-                        <p class="image-title">titulo imagen</p>
+                      <!--  <p class="image-title">titulo imagen</p>-->
                       
                     </div>
-                    <div class="text-center">
-                    <button class="file-upload-btn text-center" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Subir Imagen</button>
-                        </div>
+                    <button class="btn-analizar">Analizar</button>
+                    
                 </div>
             </div>
             
