@@ -3,7 +3,7 @@
 {% load static %}
 {% block contenido %}
 
-<div class="container">
+<div class="container mt-5">
   {% if not request.user.is_authenticated %}
   <br>
   <div class="row justify-content-center ">
@@ -14,38 +14,40 @@
                   {{ form.errors }}
               </div>
         {% endif %}
-    <div class="card col-md-12">
+        <div class="card col-md-12 px-5">
 
-        <div class="card-body mx-4">
+            <div class="card-body">
 
            
-            <div class="text-center">
-                <h3 class="dark-grey-text mb-5"><strong>Iniciar sesión</strong></h3>
+            <div class="text-center mt-4">
+                <h3 class="dark-grey-text mb-4">
+                    <strong>Iniciar sesión</strong>
+                </h3>
             </div>
 
             <!--Body-->
 
-            <div class="row-form">
+            <div class="form-group">
                 <label for="Form-email1">Correo:</label>
-                <input type="email" id="Form-email" name="email" class="form-control">
+                <input type="email" id="Form-email" name="email" class="form-control  mb-3">
             </div>
 
-            <div class="row-form pb-3">
-                <label for="Form-pass1">Contraseña:</label>
+            <div class="form-group ">
+                <label for="Form-pass1 mx-0">Contraseña:</label>
                 <input type="password" id="Form-pass1" name="password" class="form-control">
-                <a href="/password_reset" class="blue-text ml-1"><p class="font-small blue-text d-flex justify-content-end">Olvidastes tu Contraseña?</p></a>
+                <a href="/password_reset" class="blue-text  "><p class="font-small blue-text d-flex justify-content-end">Olvidastes tu Contraseña?</p></a>
             </div>
 
             <div class="text-center mb-3">
-                <button type="submit" class="btn btn-rounded  btn_col ">Iniciar<i class="fa fa-sign-in ml-1"></i> </button>
+                <button type="submit" class="btn btn-rounded  btn_col primary-color ">Iniciar</button>
             </div>
 
 
         </div>
 
         <!--Footer-->
-        <div class="modal-footer mx-5 pt-3 mb-1">
-            <p class="font-small grey-text d-flex justify-content-end">No eres miembro? <a href="/registrarse" class="blue-text ml-1"> Registrate</a></p>
+        <div class=" text-center pt-2 mb-1">
+            <p class="font-small grey-text  ">No eres miembro? <a href="/registrarse" class="blue-text ml-1"> Registrate</a></p>
         </div>
 
     </div>
