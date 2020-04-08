@@ -34,6 +34,8 @@ INSTALLED_APPS = [
     'import_export',
     'applications.users',
     'applications.seo',
+    'applications.covid19',
+    
 ]
 
 MIDDLEWARE = [

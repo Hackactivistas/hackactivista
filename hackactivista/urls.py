@@ -34,9 +34,10 @@ urlpatterns = [
     url(r'^$', Index_principal.as_view(), name="index_principal"),
     url(r'quienes-somos', TemplateView.as_view(
         template_name='quienes-somos.html'), name='p_quienes_somos'),
-
     url(r'proyectos/$', TemplateView.as_view(
         template_name='proyectos.html'), name='p_nuestros_proyectos'),
+    path(r'covid19/', include(('applications.covid19.urls', 'app_cuvid19'), 
+                    namespace='app_cuvid19')),
     url(r'coronavirus/evolucion-casos-covid-19-peru/$', TemplateView.as_view(
         template_name='casos-covid-19.html'), name='p-casos-covid-19'),
 
@@ -73,6 +74,8 @@ urlpatterns = [
     url('^', include('django.contrib.auth.urls')),
     path(r'users/', include(('applications.users.urls', 'app_users'), namespace='app_users')),
     # para activar el correo
+    path(r'registrarse/', Registrarse.as_view(), 
+        name="registrarse_usuario"),
     url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',activate, name='activate'),
     # url(r'^eventos/', include('aplicaciones.eventos.urls', namespace='app_eventos'))
 
