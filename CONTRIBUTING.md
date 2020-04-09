@@ -1,4 +1,7 @@
+
 David Chaupis - Promotor
+
+Edwin Ronald - Experto en IA
 
 Alejandro Hurtado Chacñama - Lider del proyecto
 

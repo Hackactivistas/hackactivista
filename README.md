@@ -6,10 +6,10 @@ Nuestro objetivo : Impulsar un sistema de Gobernación Abierta, desde la interdi
 
 ![Arquitectura](arquitectura-hackactivista.png)
 
-## Proyectos:
-### Diagnóstico de COVID19 con IA
+## PROYECTOS:
 
-Aplicación de diagnóstico clínico directo mediante imágenes de radiografía de tórax de casos de COVID-19, con inteligencia Artificial, [+referencia](https://github.com/lindawangg/COVID-Net)
+### Diagnóstico de COVID19 con IA - COVIDNetPerú 
+Asistencia inteligente para el diagnóstico automatizado de COVID19 por radiografía.
 
 ### ChatCOVID19 
 
@@ -108,3 +108,6 @@ Compromete tus cambios ( git commit -m 'Add some AmazingFeature')
 Empujar a la rama ( git push origin develop)
 
 Abrir una solicitud de extracción
+
+### Referencias:
+[referencia COVIDNet](https://github.com/lindawangg/COVID-Net)
