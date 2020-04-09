@@ -290,7 +290,7 @@ a:focus {
     content: "";
     width: 100%;
     display: block;
-    border-bottom: 1vw solid #FD5A58;
+    border-bottom: .35em solid #FD5A58;
     bottom: .1em;
     z-index: -1;
     left: 0;
@@ -307,7 +307,7 @@ a:focus {
     content: "";
     width: 100%;
     display: block;
-    border-bottom: 1.2vw solid #43A6F6;
+    border-bottom: .35em solid #43A6F6;
     bottom: .1em;
     z-index: -1;
     left: 0;
@@ -324,7 +324,7 @@ a:focus {
     content: "";
     width: 100%;
     display: block;
-    border-bottom: 1.2vw solid var(--color1);
+    border-bottom: .35em solid var(--color1);
     bottom: .1em;
     z-index: -1;
     left: 0;
@@ -341,7 +341,7 @@ a:focus {
     content: "";
     width: 100%;
     display: block;
-    border-bottom: 1.2vw solid var(--color4);
+    border-bottom: .35em solid var(--color4);
     bottom: .1em;
     z-index: -1;
     left: 0;
@@ -358,7 +358,7 @@ a:focus {
     content: "";
     width: 100%;
     display: block;
-    border-bottom: 1.2vw solid var(--color5);
+    border-bottom: .35em solid var(--color5);
     bottom: .1em;
     z-index: -1;
     left: 0;
