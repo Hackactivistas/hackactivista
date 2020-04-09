@@ -38,13 +38,15 @@
 
           </ul> 
           <div class="btn-salir">
-          {% if not request.user.is_authenticated %}
-          <a href="/iniciar">Iniciar sesión</a>
-          {% else %}
-            <span class="ver_mas smalll">Bienvenido: {{request.user.usuario}} </span>
-            &nbsp;
-            <a href=" {% url 'cerrar_sesion' %} "> <span class="smalll"> Salir</span></a>
-          {% endif %}
+            {% if not request.user.is_authenticated %}
+            <a href="/iniciar">
+             <button class="signup-btn"> <i class="fas fa-user-circle"></i>&nbsp; Iniciar sesión</button>
+            </a>
+            {% else %}
+            <div class="getout-btn">  <span class="ver_mas smalll">Bienvenido: <strong>{{request.user.usuario}}</strong></span>&nbsp;<a href=" {% url 'cerrar_sesion' %} "> <span class="smalll"> Salir</span></a></div>
+             
+              
+              {% endif %}
           </div>
 
 
