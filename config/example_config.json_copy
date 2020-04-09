@@ -15,6 +15,7 @@
         "password": ""
     },
     "api_diagnosis_covid19":{
-        "apikey":"xxxx"
+        "covidnet_endpoint":"xxx",
+        "covidnet_apikey":"xxxx"
     }
 }

@@ -4,10 +4,10 @@
     {% load static from staticfiles %}
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta http-equiv=”Pragma” content=”no-cache”>
-<meta http-equiv=”Expires” content=”-1″>
-<meta http-equiv=”CACHE-CONTROL” content=”NO-CACHE”>
-    <title>{% block title %}Hackactivista {% endblock %}</title>
+    <meta http-equiv=”Pragma” content=”no-cache”>
+    <meta http-equiv=”Expires” content=”-1″>
+    <meta http-equiv=”CACHE-CONTROL” content=”NO-CACHE”>
+    <title>{% block title %}Hackactivistas {% endblock %}</title>
     <link rel="shortcut icon" type="image/png" href=" {% static "img/favicon/icon.png" %}"/>
     <meta name="description" content="{% block description %}Somos un movimiento voluntario de activistas de la información al servicio de una sociedad abierta{% endblock %}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -66,43 +66,7 @@
 <div class="site-content"></div>-->
 {% block contenido %}
 {% endblock %}
-<!-- Div para linkear archivo vuejs, las vistas solo se activan cuando coinciden con las rutas definidas en el archivo App.js -->
-<script type="text/javascript">window.csrf_token = "{% csrf_token %}"</script>
-{#<div id="vueapp"></div>#}
 
-<!-- JQuery -->
-<script type="text/javascript" src="{% static "js/jquery-3.2.1.min.js" %} "></script>
-<script src="{% static "js/jquery.js" %}"></script>
-<!-- Bootstrap tooltips -->
-<script type="text/javascript" src=" {% static "js/popper.min.js" %} "></script>
-<!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="{% static "js/bootstrap.min.js" %}"></script>
-<!-- MDB core JavaScript -->
-<script type="text/javascript" src="{% static "js/mdb.min.js" %}"></script>
-<!-- Datatable -->
-<script type="text/javascript" src="{% static "js/jquery.dataTables.js" %}"></script>
-
-<!-- all Script -->
-<script type="text/javascript" src="{% static "js/scripts.js" %}"></script>
-<!-- Jquery validate -->
-<script type="text/javascript" src="{% static "js/jquery.validate.js" %}"></script>
-<!-- para buscadores, autocomplete -->
-<script src="{% static "js/select2.min.js" %}"></script>
-<script src="{% static "js/sweetalert2.all.min.js" %}"></script>
-
-<script src="{% static "js/build.min.js" %}"></script>
-<script src="{% static "js/moment.min.js" %}"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twbs-pagination/1.4.1/jquery.twbsPagination.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
-
-<!--<script>
-    $(window).on('load', function () {
-        // Animate loader off screen
-        $(".site-content").show();
-        $(".se-pre-con").fadeOut();
-    });
-</script>-->
 {% block js %}
 {% endblock %}
 <!-- Load Facebook SDK for JavaScript -->

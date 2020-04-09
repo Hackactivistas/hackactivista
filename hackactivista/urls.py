@@ -77,7 +77,8 @@ urlpatterns = [
     path(r'registrarse/', Registrarse.as_view(), 
         name="registrarse_usuario"),
     url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',activate, name='activate'),
-    # url(r'^eventos/', include('aplicaciones.eventos.urls', namespace='app_eventos'))
+    url(r'^completar_registro_usuario/$', Completar_registro_perfil.as_view(),
+        name='completar_registro_perfil_usuario'),
 
     # editor django-markdown-editor
     url('martor/', include('martor.urls')),
