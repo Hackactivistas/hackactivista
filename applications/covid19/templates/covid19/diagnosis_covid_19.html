@@ -1,6 +1,14 @@
 {% extends "base.html" %}
-{% block title %}Hackactivistas | Diagnóstico de COVID-19 con IA{% endblock title %}
 {% load static %}
+{% block title %}Hackactivistas | Diagnóstico de COVID-19 con IA{% endblock title %}
+{% block js %}
+  {# JQUERY FILE UPLOAD SCRIPTS #}
+  <script src="{% static 'js/jquery-file-upload/vendor/jquery.ui.widget.js' %}"></script>
+  <script src="{% static 'js/jquery-file-upload/jquery.iframe-transport.js' %}"></script>
+  <script src="{% static 'js/jquery-file-upload/jquery.fileupload.js' %}"></script>
+  {# PHOTOS PAGE SCRIPTS #}
+  <script src="{% static 'covid19/js/img-upload-covid19.js' %}"></script>
+{% endblock %}
 {% block contenido %}
 <div class="container-fluid pt-6">
 	<div class="container">
