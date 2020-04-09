@@ -6,14 +6,10 @@ Nuestro objetivo : Impulsar un sistema de Gobernación Abierta, desde la interdi
 
 ![Arquitectura](arquitectura-hackactivista.png)
 
-## Proyectos:
-### Alerta MINSA 
+## PROYECTOS:
 
-Trazabilidad para infectados por geolocalización y ubigeo telefónico.
-
-### BioCOVID19 
-
-Potenciales inhibidores moleculares de la proteasa de la SARS-CoV-2.
+### Diagnóstico de COVID19 con IA - COVIDNetPerú 
+Asistencia inteligente para el diagnóstico automatizado de COVID19 por radiografía.
 
 ### ChatCOVID19 
 
@@ -112,3 +108,6 @@ Compromete tus cambios ( git commit -m 'Add some AmazingFeature')
 Empujar a la rama ( git push origin develop)
 
 Abrir una solicitud de extracción
+
+### Referencias:
+[referencia COVIDNet](https://github.com/lindawangg/COVID-Net)

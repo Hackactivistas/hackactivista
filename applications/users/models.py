@@ -74,8 +74,8 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
     date_joined = models.DateTimeField(_('date joined'), default=timezone.now)
     objects = CustomUserManager()
     # cuidado solo el inicio de sesion esta configurado con correo:
-    USERNAME_FIELD = 'usuario'
-    REQUIRED_FIELDS = ['email']
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['usuario']
     class Meta:
         verbose_name = _('user')
         verbose_name_plural = _('Usuarios')

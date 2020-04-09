@@ -121,9 +121,11 @@ class Index_principal(TemplateView):
 def userlogin(request):
     next = request.GET.get('next', '/')
     if request.method == "POST":
-        username = request.POST['username']
+        email = request.POST['email']
         password = request.POST['password']
-        user = authenticate(username=username, password=password)
+        print("email>", email)
+        print("password>", password)
+        user = authenticate(email=email, password=password)
         # user = UsernameOrEmailBackend()
         if user is not None:
             if user.is_active:
@@ -266,7 +268,7 @@ class Completar_registro_perfil(LoginRequiredMixin, UpdateView):
 class Registrarse(SuccessMessageMixin, CreateView):
     form_class = UsuarioForm
     template_name = 'registrarse.html'
-    success_url = reverse_lazy('completar_registro_perfil_usuario')
+    success_url = reverse_lazy('index_principal')
     # user_register = UsuarioForm
     # success_message  = ()
 
@@ -274,6 +276,8 @@ class Registrarse(SuccessMessageMixin, CreateView):
         form.instance.set_password(self.request.POST['password'])
         # forzamos el guardado de datos para poder asignar al grupo
         self.object = form.save()
+        self.object.is_active = True
+        self.object.save()
         Perfil_usuario.objects.create(usuario=self.object)
         # envio de confirmacion al correo 
         # current_site = get_current_site(self.request)
@@ -282,31 +286,27 @@ class Registrarse(SuccessMessageMixin, CreateView):
         #     'uid': urlsafe_base64_encode(force_bytes(self.object.pk)),
         #     'token': account_activation_token.make_token(self.object),
         # })
-        mensaje = 'Bienvenido a Future Startup Hero'
+
+        mensaje = 'Bienvenido a Hackactivistas'
         user = authenticate(email=self.request.POST['email'], 
                             password=self.request.POST['password'])
-        
         if user is not None:
             user.is_active = True
             user.save()
             login(self.request, user)
                 
 
-        asunto = "Confirma tu correo en Future Startup Hero"
-        # mensaje = ('Bienvenido, se ha registrado en Future Startup Hero.\n '
-        #         'Correo :' + user.email + '\n'
-        #         'usuario : ' + user.usuario + '\n'
-        #         'http://futurestartuphero.com')
-        send_mail(
-            asunto, 
-            'Registro de usuario en Future Startup Hero',
-            EMAIL_HOST_USER, 
-            [self.object.email],
-            html_message=mensaje,
-            fail_silently=False)
-        grupo, created = Group.objects.get_or_create(name='Emprendedor')
+        # asunto = "Confirma tu correo en Hackactivistas"
+        # send_mail(
+        #     asunto, 
+        #     'Registro de usuario en Future Startup Hero',
+        #     EMAIL_HOST_USER, 
+        #     [self.object.email],
+        #     html_message=mensaje,
+        #     fail_silently=False)
+        grupo, created = Group.objects.get_or_create(name='usuario')
         grupo.user_set.add(self.object)
-        messages.success(self.request, '''Gracias por registrarse, a continuación complete sus datos''')
+        messages.success(self.request, '''Gracias por registrarse.!''')
         # return super(Registrarse, self).form_valid(form)
         return HttpResponseRedirect(self.get_success_url())
 # verificar si un usuario ya existe, registro de formularios

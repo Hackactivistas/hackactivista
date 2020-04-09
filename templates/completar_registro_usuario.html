@@ -1,0 +1,261 @@
+{% extends "base_registro_usuario.html" %}
+{% block title %}Ekpapalek | Completar registro usuario{% endblock title %}
+{% block contenido %}
+{% load staticfiles %}
+         
+<!-- segundo paso registro-->
+    <div class="container">
+      <form role="form" id="form_perfil_usuario" method="POST" enctype="multipart/form-data">{% csrf_token %}
+        <div class="row text-center marg2">
+            <div class="col-md-12 pt-3 pb-5 pt-5">
+                   <h3 class="h3-responsive product-name ">Editar perfil</h3>
+            </div>
+        </div>
+        {% if form.errors %}
+       <div class="alert alert-danger" role="alert">
+         {{ form.errors }}
+       </div>
+    {% endif %}
+        <div class="row justify-content-center pb-5">
+              <div class="form-group col-md-5 avatar text-center">
+                {{form.foto_portada.label_tag}}
+              <a href="#"><img src="{{request.user.perfil_usuario.foto_portada.url}}" alt="avatar mx-auto" class="rounded-circle img-fluid image-ment"></a> 
+              
+              </div>
+             <div class="form-group text-center col-md-5">
+              {{form.foto_portada}}
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="form-group col-md-5">
+              {# <label for="inputEmail4">Email</label> #}
+              {{form.nombres.label_tag}}
+              {{form.nombres}}
+            </div>
+            <div class="form-group col-md-5">
+              {{form.apellidos.label_tag}}
+              {{form.apellidos}}
+            </div>
+            <input type="hidden" name="usuario" value="{{request.user.pk}}">
+        </div>
+         <div class="row justify-content-center">
+            <div class="form-group col-md-5">
+                   {{form.celular.label_tag}}
+                  {{form.celular}}
+            </div>
+            <div class="form-group col-md-5">
+                   {{form.ciudad.label_tag}}
+                  {{form.ciudad}}
+            </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="form-group col-md-5">
+                  {{form.profesion.label_tag}} 
+                  {{form.profesion}} 
+          </div>
+              <div class="form-group col-md-5">
+                    {{form.pais.label_tag}} 
+                    {{form.pais}} 
+            </div>
+        </div>
+        <div class="row justify-content-center">
+           <div class="form-group col-md-10">
+                  {{form.areas_conocimiento.label_tag}} 
+                  {{form.areas_conocimiento}} 
+          </div>
+        </div>
+        <!--<div class="row justify-content-center">
+          <div class="form-group col-md-9">
+              {{form.centro_estudios.label_tag}} 
+              {{form.centro_estudios}} 
+            </div>
+        </div> -->
+
+        <div class="row  justify-content-center pt-3">
+        <div class="form-group col-md-10">
+            <p class="">Instituciones educativas:</p>
+          </div>
+      </div>
+        <div class="row justify-content-center ">
+            <div class="form-group col-md-3">
+                 <label>Institución:</label>
+                <input class="form-control form-cont form-control-sm" type="text" name="institucion_centro_estudios" placeholder="Ejemplo Universidad Peruana Cayetano Heredia" required="">
+            </div>
+            <div class="form-group col-md-3">
+                   <label>Enlace logo institución:</label>
+                <input class="form-control form-cont form-control-sm"  type="url" name="url_logo_centro_estudios" id="url_logo_centro_estudios" required="" placeholder="Ejem: https://uni.edu/uni-logo.png">
+            </div>
+            <div class="form-group col-md-3">
+                <label>Grado obtenido:</label>
+                <input class="form-control form-cont form-control-sm" type="text" name="grado_centro_estudios" placeholder="Ejemplo BSc" required=""> 
+            </div>
+            <div class="form-group col-md-1">
+              <div id="add_centro_estudios" class="form-group col-md-1 col-sm-1 mt-flex center-element border-color">
+              <span class="icon-v">+</span>
+            </div>
+            </div>
+        </div>    
+        <div id="id_referencia_centro_estudios"></div>  
+         <!-- <div class="row justify-content-center">
+          <div class="form-group col-md-9">
+              {{form.logros.label_tag}} 
+              {{form.logros}} 
+            </div>
+        </div> -->
+        <div class="row  justify-content-center ">
+        <div class="form-group col-md-10">
+            <p class="">Becas ganadas:</p>
+          </div>
+      </div>
+        <div class="row justify-content-center">
+            <div class="form-group col-md-3">
+                 <label>Institución:</label>
+                <input class="form-control form-cont form-control-sm" type="text" name="institucion_logros" placeholder="Ejemplo Universidad de Costa Rica" required="">
+            </div>
+            <div class="form-group col-md-3">
+                   <label>Enlace logo institución:</label>
+                <input class="form-control form-cont form-control-sm"  type="url" name="url_logo_logros" id="url_logo_logros" required="" placeholder=" Ejem: https://uni.edu/uni-logo.png">
+            </div>
+            <div class="form-group col-md-3">
+                <label>Mención:</label>
+                <input class="form-control form-cont form-control-sm" type="text" name="mencion_logros" placeholder="Ejemplo Beca estudios de maestría" required=""> 
+            </div>
+    
+            <div class="form-group col-md-1">
+              <div id="add_becas" class="form-group col-md-1 col-sm-1 mt-flex center-element border-color">
+              <span class="icon-v">+</span>
+            </div>
+            </div>
+        </div>
+        <dir id="id_referencia_becas" ></dir>  
+
+        <div class="row justify-content-center">
+          <div class="form-group col-md-5     ">
+                  {{form.idiomas.label_tag}} 
+                  {{form.idiomas}} 
+          </div>
+            <div class="form-group col-md-5">
+                    {{form.categoria.label_tag}} 
+                    {{form.categoria}} 
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="form-group col-md-5">
+                  {{form.compromiso.label_tag}} 
+                  {{form.compromiso}} 
+          </div>
+          <div class="form-group col-md-5">
+                  {{form.posicion_actual.label_tag}} 
+                  {{form.posicion_actual}} 
+          </div>
+        </div>
+        <div class="row justify-content-center">
+             <div class="form-group col-md-10">
+                    {{form.preguntas_frecuentes.label_tag}} 
+                    {{form.preguntas_frecuentes}} 
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="form-group col-md-10">
+                  {{form.biografia.label_tag}} 
+                  {{form.biografia}} 
+          </div>
+        </div>
+        <div class="row justify-content-center pb-5 pt-3">
+           <div class="col-md-6 text-center">
+              <button type="button" class="btn btn-indigo btn_complete_perfil_user" >Terminar</button>
+           </div>
+        </div>
+      </form>
+
+    </div>
+</body>
+
+{% endblock %}
+{% block script %}
+  <script>
+  class Ui1{
+    addInputStudios(cssClass){
+            const div = document.createElement('div');
+            div.className = `${cssClass}`;     
+            div.innerHTML=`
+                    <div class="form-group col-md-3">
+                        <input class="form-control form-cont form-control-sm" type="text" name="institucion_centro_estudios" placeholder="Ejemplo Universidad Peruana Cayetano Heredia" required="">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <input class="form-control form-cont form-control-sm"  type="url" name="url_logo_centro_estudios" id="url_logo_centro_estudios" required="" placeholder="Ejem: https://uni.edu/uni-logo.png">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <input class="form-control form-cont form-control-sm" type="text" name="grado_centro_estudios" placeholder="Ejemplo BSc" required=""> 
+                    </div>
+                    <div class="form-group col-md-1">
+                      <div id="delete" class="form-group col-md-1 col-1  center-element border-color">
+                      <span id="delete1" class="icon-v">-</span>
+                    </div>
+                    </div>
+            ` ;  
+            // Show in The DOM
+            const app = document.querySelector('#form_perfil_usuario');
+            const form = document.querySelector('#id_referencia_centro_estudios');
+            // Insert Message in the UI
+            app.insertBefore(div, form);
+    }
+
+    addInputBecas(cssClass){
+            const div = document.createElement('div');
+            div.className = `${cssClass}`;     
+            div.innerHTML=`
+                  <div class="form-group col-md-3">
+                      <input class="form-control form-cont form-control-sm" type="text" name="institucion_logros" placeholder="Ejemplo Universidad de Costa Rica" required="">
+                  </div>
+                  <div class="form-group col-md-3">
+                      <input class="form-control form-cont form-control-sm"  type="url" name="url_logo_logros" id="url_logo_logros" required="" placeholder=" Ejem: https://uni.edu/uni-logo.png">
+                  </div>
+                  <div class="form-group col-md-3">
+                      <input class="form-control form-cont form-control-sm" type="text" name="mencion_logros" placeholder="Ejemplo Beca estudios de maestría" required=""> 
+                  </div>
+                  <div class="form-group col-md-1">
+                    <div id="delete" class="form-group col-md-1 col-sm-1 center-element border-color">
+                    <span id="delete1" class="icon-v">-</span>
+                  </div>
+                  </div>
+            ` ;  
+            // Show in The DOM
+            const app = document.querySelector('#form_perfil_usuario');
+            const form = document.querySelector('#id_referencia_becas');
+            // Insert Message in the UI
+            app.insertBefore(div, form);
+    }
+
+    deleteInputs(element) {
+        if(element.id === `delete`) {
+            element.parentElement.parentElement.remove();
+        }else if(element.id === `delete1`){
+            element.parentElement.parentElement.parentElement.remove();
+        }
+    }
+}
+$('#add_centro_estudios').on('click', function(e){
+    const text = new Ui1();
+    text.addInputStudios(`row justify-content-center`);
+  });
+
+$('#form_perfil_usuario').on('click', function(e){
+    const ui = new Ui1();
+        ui.deleteInputs(e.target);
+  });
+
+$('#add_becas').on('click', function(e){
+    const text = new Ui1();
+    text.addInputBecas(`row justify-content-center`);
+  });
+
+$('.btn_complete_perfil_user').on('click', function(e){
+    if ($('#form_perfil_usuario').valid())
+    {
+      $('#form_perfil_usuario').submit()
+    }
+  });
+</script>
+{% endblock %}
