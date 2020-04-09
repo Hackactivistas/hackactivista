@@ -27,11 +27,15 @@ from applications.users.views import (change_password,
                                         activate)
 # para cambio de contraseña con redes scciales
 from applications.users import views as core_views
+from applications.configurations.views import TermsCondition, PrivacyPolice
 
 urlpatterns = [
     # admin
     url(r'^administrador/', admin.site.urls),
     url(r'^$', Index_principal.as_view(), name="index_principal"),
+    # politicas y privacidad para pedir correo al memento de auntenticacion con redes sociales.
+    url(r'^politicas$', TermsCondition.as_view(), name="p_politicas"),
+    url(r'^terminos$', PrivacyPolice.as_view(), name="p_terminos"),
     url(r'quienes-somos', TemplateView.as_view(
         template_name='quienes-somos.html'), name='p_quienes_somos'),
     url(r'proyectos/$', TemplateView.as_view(

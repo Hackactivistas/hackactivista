@@ -32,9 +32,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'import_export',
+    'martor',
     'applications.users',
     'applications.seo',
     'applications.covid19',
+    'applications.configurations'
     
 ]
 

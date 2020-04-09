@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static martortags%}
+{% load static %}
+{% block title %} Hackactivistas | Términos y condiciones {% endblock title %}
+{% block contenido %}
+<div class="container-fluid pt-6 cont-index">
+	<div class="container   ">
+		<div class="row">
+		  <main class="col-sm-12 ml-sm-auto col-md-12 pt-3" role="main">
+		        <section class="content">
+		        	{% for term in terms %}
+		        	{% if forloop.first %}
+			       	    <div class="form-row center">
+					   		<div class="form-group col-md-10">
+					   			Última actualización : {{term.date_create}}
+					   			<p align="justify">{{term.content|safe_markdown}} </p>
+					   		</div>
+					   	</div>
+		        	{% endif %}
+		        	{% endfor %}
+		        </section>
+		  </main>
+		</div>
+	</div>
+</div>
+
+{% endblock contenido %}
+
