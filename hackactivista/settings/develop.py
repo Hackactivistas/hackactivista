@@ -36,4 +36,5 @@ DATABASES = {
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = dataConfig.get('secret_key').get('key')
-WHATSAPP_CONFIG = dataConfig.get('wsp')
+COVIDNET_ENDPOINT = dataConfig.get('api_diagnosis_covid19').get('covidnet_endpoint')
+COVIDNET_API_KEY = dataConfig.get('api_diagnosis_covid19').get('covidnet_apikey')
