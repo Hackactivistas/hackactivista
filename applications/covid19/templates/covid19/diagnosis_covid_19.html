@@ -15,30 +15,79 @@
        
             
             </div>
-            <div class="col-md-6 ">            
-                <div class="file-upload">                
-                    <div class="image-upload-wrap">
-                        <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
-                        <div class="drag-text">
-                            <h3>Ingresa la imagen de rayos x</h3>
-                            <div class="text-center">
-                                <button class="file-upload-btn text-center" type="button" onclick="$('.file-upload-input').trigger( 'click' )"> <i class="fas fa-cloud-upload-alt"></i> Subir Imagen</button>
-                            </div>
-                            <br>
+            <div class="col-md-6 "> 
+                    
+                <div class="file-upload"> 
+                    <p class="font-weight-bold"> Agregar la imagen que deseas analisar</p> 
+                    <form action="">                  
+                        <div class="image-upload-wrap">
+                            <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+                            <div class="drag-text">
+                                <h3>Ingresa la imagen de rayos x</h3>
+                                <div class="text-center">
+                                    <button class="file-upload-btn text-center" type="button" onclick="$('.file-upload-input').trigger( 'click' )"> <i class="fas fa-cloud-upload-alt"></i> Subir Imagen</button>
+                                </div>
+                                <br>
+                            </div> 
+                          
                         </div>
-                    </div>
-                    <div class="file-upload-content">
-                        <div class="image-title-wrap">
-                            <button type="button" onclick="removeUpload()" class="remove-image"><i class="fas fa-trash-alt"></i></button>
-                        </div>
-                        <img class="file-upload-image" src="#" alt="your image" />
-                      <!--  <p class="image-title">titulo imagen</p>-->
                       
-                    </div>
-                    <button class="btn-analizar">Analizar</button>
+                        <div class="file-upload-content">
+                            <div class="image-title-wrap">
+                                <button type="button" onclick="removeUpload()" class="remove-image"><i class="fas fa-trash-alt"></i></button>
+                            </div>
+                            <img class="file-upload-image" src="#" alt="your image" />
+                        <!--  <p class="image-title">titulo imagen</p>-->
+                            <div class="px-3 py-3 custom-control ">
+                                <div class="custom-control  custom-checkbox ">
+                                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                                    <label class="custom-control-label" for="defaultUnchecked"> He leído y acepto la política de privacidad </label>
+                                </div>
+                            </div>    
+                        </div>
+                        <button type="button" class="btn-analizar disabled" data-toggle="modal" data-target=".bd-example-modal-lg">Analizar</button>
+                    </form>  
                     
                 </div>
             </div>
+
+            <!-- Modal -->
+            <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-light">
+                    <h5 class="modal-title font-weight-bold" id="exampleModalLabel ">Analisis | <span class="text-muted font-weight-light">02/06/2020 </span> </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                   
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <!--<h4 class="font-weight-bold">titulo</h4>-->
+                               
+                                <img src="https://www.efesalud.com/files/2017/11/Radiograf%C3%ADa-sin-c%C3%A1ncer.jpg" width="350px" alt="">
+                                <p class="font-weight-bold mt-3">CT Oroginal</p>
+                            </div>
+                            <div class="col-md-6">
+                                <!--<h4 class="font-weight-bold">titulo</h4>-->
+                                
+                                <img src="https://www.efesalud.com/files/2017/11/Radiograf%C3%ADa-sin-c%C3%A1ncer.jpg" width="350px" alt="">
+                                <p class="font-weight-bold mt-3"> Clasificaciòn : <span class="font-weight-normal">Covid-19</span></p>
+                                <p class="font-weight-bold ">Confiabilidad : <span class="font-weight-normal">99%</span></p>
+                            </div>
+               
+                        </div>
+             
+                   
+                 
+                </div>
+                </div>
+            </div>
+
+
+          
             
 		</div>
 	</div>
