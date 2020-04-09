@@ -5,21 +5,22 @@
 <div class="container-fluid pt-6">
 	<div class="container">
 		<div class="row mt-1 mb-4">
-			<div class="col-md-6 ">
-                
-                    
-                    <h1 class="title title_35"><span class="rs_azul">DIAGNOSTICO CON INTELIGENCIA ARTIFICIAL</span></h1>
-                    <h4>Decripción</h4>
-                    <p>Scented earl grey assam rose hips earl grey caffeine taro hong kong-style milk shoumei shrub masala chai teapot hong kong-style milk. Assam camellia sinensis kukicha earl grey theanine brew teapot bamboo whisk orange pekoe lapsang souchong hot green teacup infusion.</p>
-              
-       
-            
+             <!-- Titulo Descripcion -->
+			<div class="col-md-6 ">    
+                <h1 class="title title_35"><span class="rs_azul">COVIDNetRx</span></h1>
+                <h4>Asistencia inteligente para el diagnóstico automatizado por radiografía.</h4>
+                <p>Gran parte del mundo se está viendo afectado por el COVID-19, siendo esta crisis una oportunidad que inspira esfuerzos colectivos sin precedentes en distintos campos creativos. Por ello nos complace como Hackactivistas poder ofrecer nuestra contribución; así nace, COVIDNetRx: un software de inteligencia artificial que evalúa a los sospechosos de COVID-19 a través de imágenes de rayos X del tórax indicando la probabilidad de estar infectado.</p>
+                <p>COVIDNetRx ha sido desarrollado con la intención de impulsar un temprano diagnóstico radiográfico con asistencia inteligente reduciendo asi la carga laboral del personal de salud automatizando el tiempo de respuesta y costos.</p>
             </div>
+            <!-- End Titulo Descripcion -->
+
+            <!-- End Titulo Descripcion -->
             <div class="col-md-6 "> 
                     
                 <div class="file-upload"> 
                     <p class="font-weight-bold"> Agregar la imagen que deseas analisar</p> 
-                    <form action="">                  
+                    <form action=""> 
+                        <!-- Subir imagen -->                 
                         <div class="image-upload-wrap">
                             <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
                             <div class="drag-text">
@@ -31,7 +32,9 @@
                             </div> 
                           
                         </div>
+                         <!-- end Subir imagen -->  
                       
+                         <!--  imagen  cargada + checkbox -->  
                         <div class="file-upload-content">
                             <div class="image-title-wrap">
                                 <button type="button" onclick="removeUpload()" class="remove-image"><i class="fas fa-trash-alt"></i></button>
@@ -45,7 +48,10 @@
                                 </div>
                             </div>    
                         </div>
+                        <!--  end imagen  cargada + checkbox -->  
+                         <!-- boton -->
                         <button type="button" class="btn-analizar " data-toggle="modal" data-target=".bd-example-modal-lg">Analizar</button>
+                        <!-- boton submit -->
                     </form>  
                     
                 </div>
@@ -56,39 +62,30 @@
                 <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header bg-light">
-                    <h5 class="modal-title font-weight-bold" id="exampleModalLabel ">Analisis | <span class="text-muted font-weight-light">02/06/2020 </span> </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                        <h5 class="modal-title font-weight-bold" id="exampleModalLabel ">Analisis | <span class="text-muted font-weight-light">02/06/2020 </span> </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
                    
 
-                        <div class="row">
-                            <div class="col-md-6">
-                                <!--<h4 class="font-weight-bold">titulo</h4>-->
-                               
-                                <img src="https://www.efesalud.com/files/2017/11/Radiograf%C3%ADa-sin-c%C3%A1ncer.jpg" width="350px" alt="">
-                                <p class="font-weight-bold mt-3">CT Oroginal</p>
-                            </div>
-                            <div class="col-md-6">
-                                <!--<h4 class="font-weight-bold">titulo</h4>-->
-                                
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!--<h4 class="font-weight-bold">titulo</h4>-->
+                            <img src="https://www.efesalud.com/files/2017/11/Radiograf%C3%ADa-sin-c%C3%A1ncer.jpg" width="350px" alt="">
+                            <p class="font-weight-bold mt-3">CT Oroginal</p>
+                        </div>
+                        <div class="col-md-6">
+                                <!--<h4 class="font-weight-bold">titulo</h4>--->
                                 <img src="https://www.efesalud.com/files/2017/11/Radiograf%C3%ADa-sin-c%C3%A1ncer.jpg" width="350px" alt="">
                                 <p class="font-weight-bold mt-3"> Clasificaciòn : <span class="font-weight-normal">Covid-19</span></p>
                                 <p class="font-weight-bold ">Confiabilidad : <span class="font-weight-normal">99%</span></p>
-                            </div>
-               
                         </div>
-             
-                   
-                 
+                    </div>        
                 </div>
                 </div>
             </div>
-
-
-          
-            
+              <!-- fin Modal -->        
 		</div>
 	</div>
 </div>
