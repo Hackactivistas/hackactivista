@@ -12,6 +12,7 @@ applications/seo/migrations/*
 applications/users/migrations/*
 applications/emails/migrations/*
 applications/covid19/migrations/*
+applications/configurations/migrations/*
 llave_privada_ssl.key
 bin
 include
