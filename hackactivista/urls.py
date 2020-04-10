@@ -34,8 +34,8 @@ urlpatterns = [
     url(r'^administrador/', admin.site.urls),
     url(r'^$', Index_principal.as_view(), name="index_principal"),
     # politicas y privacidad para pedir correo al memento de auntenticacion con redes sociales.
-    url(r'^politicas$', TermsCondition.as_view(), name="p_politicas"),
-    url(r'^terminos$', PrivacyPolice.as_view(), name="p_terminos"),
+    url(r'^politicas$', PrivacyPolice.as_view(), name="p_politicas"),
+    url(r'^terminos$', TermsCondition.as_view(), name="p_terminos"),
     url(r'quienes-somos', TemplateView.as_view(
         template_name='quienes-somos.html'), name='p_quienes_somos'),
     url(r'proyectos/$', TemplateView.as_view(
