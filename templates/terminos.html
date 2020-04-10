@@ -6,14 +6,14 @@
 <div class="container-fluid pt-6 cont-index">
 	<div class="container   ">
 		<div class="row">
-		  <main class="col-sm-12 ml-sm-auto col-md-12 pt-3" role="main">
+		  <main class="col-sm-12 ml-sm-auto col-md-12  mt-5" role="main">
 		        <section class="content">
 		        	{% for term in terms %}
 		        	{% if forloop.first %}
-			       	    <div class="form-row center">
+			       	    <div class="form-row center mt-5">
 					   		<div class="form-group col-md-10">
 					   			Última actualización : {{term.date_create}}
-					   			<p align="justify">{{term.content|safe_markdown}} </p>
+					   			<p >{{term.content|safe_markdown}} </p>
 					   		</div>
 					   	</div>
 		        	{% endif %}
