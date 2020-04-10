@@ -123,8 +123,6 @@ def userlogin(request):
     if request.method == "POST":
         email = request.POST['email']
         password = request.POST['password']
-        print("email>", email)
-        print("password>", password)
         user = authenticate(email=email, password=password)
         # user = UsernameOrEmailBackend()
         if user is not None:
@@ -137,8 +135,8 @@ def userlogin(request):
             messages.error(
             request, 'Correo o contraseña no son correctos..!', extra_tags='danger')
             # return HttpResponseRedirect('/iniciar/')
-            return render(request, "login.html", {'redirect_to': next})
-    return render(request, "login.html", {'redirect_to': next})
+            return render(request, "users/login.html", {'redirect_to': next})
+    return render(request, "users/login.html", {'redirect_to': next})
 
 
 def LogOut(request):
@@ -267,7 +265,7 @@ class Completar_registro_perfil(LoginRequiredMixin, UpdateView):
 
 class Registrarse(SuccessMessageMixin, CreateView):
     form_class = UsuarioForm
-    template_name = 'registrarse.html'
+    template_name = 'users/register-user.html'
     success_url = reverse_lazy('index_principal')
     # user_register = UsuarioForm
     # success_message  = ()
@@ -278,7 +276,8 @@ class Registrarse(SuccessMessageMixin, CreateView):
         self.object = form.save()
         self.object.is_active = True
         self.object.save()
-        Perfil_usuario.objects.create(usuario=self.object)
+        Perfil_usuario.objects.create(usuario=self.object, 
+            celular= self.request.POST.get('celular'))
         # envio de confirmacion al correo 
         # current_site = get_current_site(self.request)
         # mensaje = render_to_string('acc_active_email.html', {

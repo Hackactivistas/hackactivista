@@ -1,28 +1,45 @@
-$(function () {
-
-  $(".js-upload-photos").click(function () {
-    $("#fileupload").click();
-  });
-
-  $("#fileupload").fileupload({
-    dataType: 'json',
-    done: function (e, data) {
-      var date_process = new Date();
-      if (data.result.is_valid) {
-        $('.imagen_original').attr('src', data.result.url)
-        $('.imagen_result').attr('src', data.result.data_result.url)
-        $('.clasificacion').text(data.result.data_result.clasificacion)
-        $('.confiabilidad').text(data.result.data_result.confiabilidad)
-        $('.date_process').text(date_process)
-        $('#exampleModal').modal('show');
-      }
-      else
-        {
-          alert('Disculpa, ocurrio error interno al procesar la imagen.!')
+$("#formuploadajax").on("submit", function(e){
+    e.preventDefault();
+    var formData = new FormData(document.getElementById("formuploadajax"));
+    $(".cargar_loader_ajax").show();
+    $.ajax({
+        url: "/covid19/",
+        type: "post",
+        dataType: "html",
+        data: formData,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function (data) {
+          $(".cargar_loader_ajax").hide();
+          var date_process = new Date();
+          var data = JSON.parse(data);
+          if (data.is_valid) {
+            $('.imagen_original').attr('src', data.url)
+            if (data.data_result) {
+              $('.imagen_result').attr('src', data.data_result.url)
+              $('.clasificacion').text(data.data_result.clasificacion)
+              $('.confiabilidad').text(data.data_result.confiabilidad)
+            }
+            else
+            {
+             $('.imagen_result').attr('src', '')
+             $('.clasificacion').text('Sin respuesta')
+             $('.confiabilidad').text('Desconocido') 
+            }
+            $('.date_process').text(date_process)
+            $('#exampleModal').modal('show');
+          }
+          else
+            {
+              alert('Disculpa, ocurrio error interno al procesar la imagen.!')
+            }
+        },
+        error: function () {
+            alert('error del servidor o opcion no válida..!');
         }
-    }
-  });
-
+    });
+    
 });
 
 /*vlidate upload img */

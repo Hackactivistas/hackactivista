@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static martortags%}
+
+{% block title %} Hackactivistas | Políticas de privacidad {% endblock title %}
+
+{% block contenido %}
+	<div class="container-fluid">
+	   <div class="row">
+	     <main class="col-sm-12 ml-sm-auto col-md-12 pt-3" role="main">
+	           <section class="content">
+       	    	{% for politic in politics %}
+       	    	{% if forloop.first %}
+	       	    <div class="form-row center">
+			   		<div class="form-group col-md-10">
+			   			Última Actualización : {{politic.date_create}}
+			   			{{politic.content|safe_markdown}}
+			   		</div>
+			   	</div>
+       	    	{% endif %}
+       	    	{% endfor %}
+	           </section>
+	     </main>
+	   </div>
+	 </div>	
+{% endblock contenido %}

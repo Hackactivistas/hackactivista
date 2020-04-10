@@ -46,5 +46,4 @@ class DiagnosisCovid19(LoginRequiredMixin, View):
     			'url': photo.img.url, 'data_result':get_data_api_img}
     	else:
     		data = {'is_valid': False}
-    	# print('data:', data)
     	return JsonResponse(data)
