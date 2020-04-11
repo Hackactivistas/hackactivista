@@ -36,5 +36,17 @@ DATABASES = {
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = dataConfig.get('secret_key').get('key')
+# Api CovidNet Peru
 COVIDNET_ENDPOINT = dataConfig.get('api_diagnosis_covid19').get('covidnet_endpoint')
 COVIDNET_API_KEY = dataConfig.get('api_diagnosis_covid19').get('covidnet_apikey')
+
+# Email server
+EMAIL_BACKEND = dataConfig.get("email_server").get("email_backend")
+EMAIL_SITE = dataConfig.get("email_server").get("email_site")
+EMAIL_USE_TLS = dataConfig.get("email_server").get("email_use_tls")
+DEFAULT_FROM_EMAIL = dataConfig.get("email_server").get("default_from_email")
+SERVER_EMAIL = dataConfig.get("email_server").get("server_email")
+EMAIL_HOST = dataConfig.get("email_server").get("email_host")
+EMAIL_PORT = dataConfig.get("email_server").get("email_port")
+EMAIL_HOST_USER = dataConfig.get("email_server").get("email_host_user")
+EMAIL_HOST_PASSWORD = dataConfig.get("email_server").get("email_host_password")

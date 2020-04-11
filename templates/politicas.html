@@ -6,12 +6,12 @@
 {% block contenido %}
 	<div class="container-fluid">
 	   <div class="row">
-	     <main class="col-sm-12 ml-sm-auto col-md-12 pt-3" role="main">
+	     <main class="col-sm-12 ml-sm-auto col-md-12 mt-5" role="main">
 	           <section class="content">
        	    	{% for politic in politics %}
        	    	{% if forloop.first %}
 	       	    <div class="form-row center">
-			   		<div class="form-group col-md-10">
+			   		<div class="form-group col-md-10 mt-3">
 			   			Última Actualización : {{politic.date_create}}
 			   			{{politic.content|safe_markdown}}
 			   		</div>
