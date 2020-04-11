@@ -17,5 +17,16 @@
     "api_diagnosis_covid19":{
         "covidnet_endpoint":"xxx",
         "covidnet_apikey":"xxxx"
+    },
+    "email_server":{
+        "email_backend": "django.core.mail.backends.smtp.EmailBackend",
+        "email_site" : "hackactivistasperu@gmail.com",
+        "email_use_tls" : true,
+        "default_from_email":"hackactivistasperu@gmail.com",
+        "server_email": "hackactivistasperu@gmail.com",
+        "email_host": "smtp.gmail.com",
+        "email_port": 858,
+        "email_host_user": "hackactivistasperu@gmail.com",
+        "email_host_password":"********"
     }
 }
