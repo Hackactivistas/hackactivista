@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import View
 from django.http import JsonResponse, HttpResponse
 import requests
@@ -37,13 +37,16 @@ class DiagnosisCovid19(LoginRequiredMixin, View):
         return render(self.request, 'covid19/diagnosis_covid_19.html')
 
     def post(self, request):
-    	form = DiagnosisCovid19Form(self.request.POST, self.request.FILES)
-    	if form.is_valid():
-    		photo = form.save()
-    		ac = APIClient()
-    		get_data_api_img = ac.covidnet_post('public/media/' + photo.img.name)
-    		data = {'is_valid': True, 'name': photo.img.name, 
-    			'url': photo.img.url, 'data_result':get_data_api_img}
-    	else:
-    		data = {'is_valid': False}
-    	return JsonResponse(data)
+        if request.is_ajax():
+        	form = DiagnosisCovid19Form(self.request.POST, self.request.FILES)
+        	if form.is_valid():
+        		photo = form.save()
+        		ac = APIClient()
+        		get_data_api_img = ac.covidnet_post('public/media/' + photo.img.name)
+        		data = {'is_valid': True, 'name': photo.img.name, 
+        			'url': photo.img.url, 'data_result':get_data_api_img}
+        	else:
+        		data = {'is_valid': False}
+        	return JsonResponse(data)
+        else:
+            return redirect('/')
