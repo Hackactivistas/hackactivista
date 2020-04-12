@@ -61,11 +61,6 @@ urlpatterns = [
         template_name='chat-covid19.html'), name='p_chat-covid19'),
         url(r'proyectos/kitchay-coronavida', TemplateView.as_view(
         template_name='kitchay-coronavida.html'), name='p_kitchay-coronavida'),
-    
-
-    # politicas y privacidad para pedir correo al memento de auntenticacion con redes socia.
-    # url(r'^politicas$', Politicas.as_view(), name="p_politicas"),
-    # url(r'^terminos$', Terminos.as_view(), name="p_terminos"),
     # para auntenticacion con redes sociales
     url(r'^oauth/', include('social_django.urls', namespace='social')),
     # para forzar cambio de contraseña despues de haberse autenticado con

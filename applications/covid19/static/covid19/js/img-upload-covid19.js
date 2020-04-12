@@ -14,11 +14,19 @@ $("#formuploadajax").on("submit", function(e){
           $(".cargar_loader_ajax").hide();
           var date_process = new Date();
           var data = JSON.parse(data);
+          console.log(data)
           if (data.is_valid) {
             $('.imagen_original').attr('src', data.url)
             if (data.data_result) {
-              $('.imagen_result').attr('src', data.data_result.url)
-              $('.clasificacion').text(data.data_result.clasificacion)
+              if (data.data_result.clasificacion=="error") {
+                $('.clasificacion').text("Imagen NO admitida, debe seleccionar una imagen de Rayos X del Torax")  
+                $('.imagen_result').attr('src', '' )
+              }
+              else
+              {
+               $('.clasificacion').text(data.data_result.clasificacion)   
+               $('.imagen_result').attr('src', data.data_result.url)
+              }
               $('.confiabilidad').text(data.data_result.confiabilidad)
             }
             else
