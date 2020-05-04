@@ -49,7 +49,7 @@ virtualenv -p python3 env_hackactivista && source env_hackactivista/bin/activate
 cp hackactivista/config/example_config.json_copy hackactivista/config/develop.json && cd hackactivista
 ```
 ```
-pip install -r requirements/develop.txt
+pip install -r requirements.txt
 ```
 Confgurar su DB, antes de ejecutar las migraciones.. 
 
