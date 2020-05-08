@@ -1,8 +1,9 @@
 ## Hackactivistas - Proyectos
-Somos un movimiento voluntario de activistas de la información al servicio de una sociedad abierta, nuestra base de fundamenta en la transparencia y colaboración a partir de la integración cultural.
-Si te sientes identificado únete a este movimiento.
+Somos un movimiento voluntario de activistas de la información al servicio de una sociedad abierta, nuestra base se fundamenta en la transparencia y colaboración a partir de la integración cultural.
 
-Nuestro objetivo : Impulsar un sistema de Gobernación Abierta, desde la interdisciplinaria entre hackactivista, gobierno y sociedad civil.
+Si te sientes identificado únete a nuestro movimiento.
+
+Nuestro objetivo : Impulsar un sistema de Gobernación Abierta, desde la interdisciplinaria entre hackactivistas, el gobierno y la sociedad civil.
 
 ![Arquitectura](arquitectura-hackactivista.png)
 
