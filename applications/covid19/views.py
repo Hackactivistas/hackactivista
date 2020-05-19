@@ -32,7 +32,7 @@ class APIClient:
 # 	ac = APIClient()
 # 	print(ac.covidnet_post('/home/alejandro/Desktop/prueba1.jpg'))
 
-class DiagnosisCovid19(View):
+class DiagnosisCovid19(LoginRequiredMixin, View):
     def get(self, request):
         return render(self.request, 'covid19/diagnosis_covid_19.html')
 
