@@ -40,7 +40,7 @@ sudo apt update && sudo apt install python3-pip	&& sudo pip3 install virtualenv
 ### Ejecución en modo desarrollo:
 
 ```
-git clone git@github.com:alejandrohdo/hackactivista.git
+git@github.com:Hackactivistas/hackactivista.git
 ```
 creación y activación de un entorno virtual
 ```
